@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./files/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+  <main class="main-container">
+    <section class="images">
+      <img src="./files/images/bg-main-mobile.png" alt="background" class="images__background">
+
+      <!---->
+
+      <img src="./files/images/bg-card-back.png" alt="back" class="images__back">
+      <p class="images__back__cvc">000</p>
+
+      <!---->
+
+      <img src="./files/images/bg-card-front.png" alt="front" class="images__front">
+
+      <img src="./files/images/card-logo.svg" alt="logo" class="images__front__logo">
+
+      <p class="images__front__number">0000 0000 0000 0000</p>
+
+      <p class="images__front__name">Jane Appleseed</p>
+
+      <div class="images__front__date">
+        <p class="images__front__date__month">00</p>
+        <p class="images__front__date__bar">/</p>
+        <p class="images__front__date__year">00</p>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="content__form">
+        <div class="content__form__inputs">
+          <div class="content__form__inputs__name">
+            <label for="name" class="content__form__inputs__name__label">Cardholder Name</label>
+            <input type="text" name="name" class="content__form__inputs__name__input" placeholder="e.g. Jane Appleseed">
+          </div>
+          <div class="error__name"></div>
+  
+          <div class="content__form__inputs__number">
+            <label for="number" class="content__form__inputs__number__label">Card Number</label>
+            <input type="text" name="number" class="content__form__inputs__number__input" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+          </div>
+          <div class="error__number"></div>
+  
+          <div class="content__form__inputs__information">
+            <div class="content__form__inputs__information__date">
+              <label for="month" class="content__form__inputs__information__date__label">Exp. Date (MM/YY)</label>
+              <div class="content__form__inputs__information__date__inputs">
+                <input type="text" name="month" class="content__form__inputs__information__date__inputs__month" placeholder="MM" maxlength="2">
+
+                <input type="text" name="year" class="content__form__inputs__information__date__inputs__year" placeholder="YY" maxlength="2">
+              </div>
+              <div class="error__information__date"></div>
+            </div>
+
+            <div class="content__form__inputs__information__cvc">
+              <label for="cvc" class="content__form__inputs__information__cvc__label">CVC</label>
+              <input type="text" name="cvc" class="content__form__inputs__information__cvc__input" placeholder="e.g. 123" maxlength="3">
+              <div class="error__information__cvc"></div>
+            </div>
+          </div>
+        </div>
+
+        <button class="content__form__button">
+          <p class="content__form__button__text">
+            Confirm
+          </p>
+        </button>
+
+        <div class="content__form__completed">
+          <img src="./files/images/icon-complete.svg" alt="image" class="content__form__completed__image">
+
+          <h1 class="content__form__completed__title">THANK YOU!</h1>
+
+          <p class="content__form__completed__text">We've added your card details</p>
+        </div>
+
+        <button class="content__form__continue">
+          <p class="content__form__continue__text">
+            Continue
+          </p>
+        </button>
+      </div>
+    </section>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.linkedin.com/in/guillermogerstner">Guillermo Gerstner</a>.
+    </div>
+  </main>
+
+  <script src="./index.js"></script>
+</body>
+</html>
